@@ -5,12 +5,12 @@ class Solution {
      * @return Boolean
      */
     function containsDuplicate($nums) {
-        $contains = [];
-        foreach($nums as $num){
-            if(isset($contains[$num])){
+        $hashMap = [];
+        foreach( $nums as $num){
+            if(isset($hashMap[$num])){
                 return true;
             }
-            $contains[$num]=1;
+            $hashMap[$num] = 1;
         }
         return false;
     }
